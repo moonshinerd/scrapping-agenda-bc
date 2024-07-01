@@ -48,7 +48,7 @@ def select_date(driver, day, month, year):
 def extract_info(driver):
     try:
         # Aguarde até que o elemento desejado esteja presente na página
-        wait = WebDriverWait(driver, 10)
+        wait = WebDriverWait(driver, 3)
         roberto_info = wait.until(EC.presence_of_element_located((By.XPATH, "//h4[contains(text(), 'Roberto Campos Neto')]/ancestor::div[@class='row autoridade no-gutters']")))
         agenda_items = roberto_info.find_elements(By.XPATH, ".//div[@class='col-md-8']//div[contains(@class, 'ExternalClass')]")
 
